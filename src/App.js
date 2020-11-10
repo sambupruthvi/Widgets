@@ -1,26 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Accordion from './Components/Accordion';
+import Search from './Components/Search';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default () => {
+    const questions = [
+        {
+            title: "What is react?",
+            content: "React is an open-source, front end, JavaScript library for building user interfaces or UI components."
+        },
+        {
+            title: "What is Angular?",
+            content: "Angular is a TypeScript-based open-source web application framework led by the Angular Team at Google"
+        },
+        {
+            title: "What is Vue js?",
+            content: "Vue.js is an open-source model–view–viewmodel front end JavaScript framework for building user interfaces and single-page applications"
+        }
+        
+    ]
+    return (
+        <div>
+            {/* <Accordion questions = {questions} /> */}
+            <Search />
+        </div>
+    );
 }
-
-export default App;
