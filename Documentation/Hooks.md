@@ -98,3 +98,5 @@ We cannot mark the function in useEffect async. We have 3 ways to get around
 
 useEffect cleanup function:
 - We are allowed to return one function inside useEffect hook and this function is generally used for clean up. This function is usually invoked when component is rerendered.
+
+- return 'null' in react means don't render anything.
