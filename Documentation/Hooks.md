@@ -100,3 +100,6 @@ useEffect cleanup function:
 - We are allowed to return one function inside useEffect hook and this function is generally used for clean up. This function is usually invoked when component is rerendered.
 
 - return 'null' in react means don't render anything.
+
+The useRef Hook:
+- useRef returns a mutable ref object whose .current property is initialized to the passed argument (initialValue). The returned object will persist for the full lifetime of the component.
