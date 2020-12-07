@@ -3,6 +3,8 @@ import Accordion from './Components/Accordion';
 import Dropdown from './Components/Dropdown';
 import Search from './Components/Search';
 import Translate from './Components/Translate';
+import Header from './Components/Header';
+import Route from './Components/Routes';
 
 export default () => {
     const questions = [
@@ -35,10 +37,9 @@ export default () => {
             value: "blue"
         }
     ]
-    // const [selected, setSelected] = useState(options[0]);
+    const [selected, setSelected] = useState(options[0]);
     // const [toggleButton, onToggleButton] = useState(true);
     return (
-
         <div>
             {/* <Accordion questions = {questions} /> */}
             {/* <Search /> */}
@@ -48,12 +49,30 @@ export default () => {
                 Toggle Dropdown</button>
             {toggleButton ?
                 <Dropdown 
+                label = 'Select a Color'
                 selected = {selected}
                 onSelectedChange = {setSelected}
                 options = {options}
                 /> : ''
             } */}
-            <Translate /> 
+            <Header />
+            <Route path="/">
+                <Accordion questions={questions} />
+            </Route>
+            <Route path="/list">
+                <Search />
+            </Route>
+            <Route path="/dropdown">
+                <Dropdown 
+                    label = 'Select a Color'
+                    selected = {selected}
+                    onSelectedChange = {setSelected}
+                    options = {options}
+                /> 
+            </Route>
+            <Route path="/translate">
+                <Translate />
+            </Route>
         </div>
     );
 }
