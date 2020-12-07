@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Accordion from './Components/Accordion';
 import Dropdown from './Components/Dropdown';
 import Search from './Components/Search';
+import Translate from './Components/Translate';
 
 export default () => {
     const questions = [
@@ -15,7 +16,7 @@ export default () => {
         },
         {
             title: "What is Vue js?",
-            content: "Vue.js is an open-source model–view–viewmodel front end JavaScript framework for building user interfaces and single-page applications"
+            content: "Vue.js is an open-source model–view–view model front end JavaScript framework for building user interfaces and single-page applications"
         }
         
     ]
@@ -34,14 +35,14 @@ export default () => {
             value: "blue"
         }
     ]
-    const [selected, setSelected] = useState(options[0]);
-    const [toggleButton, onToggleButton] = useState(true);
+    // const [selected, setSelected] = useState(options[0]);
+    // const [toggleButton, onToggleButton] = useState(true);
     return (
 
         <div>
             {/* <Accordion questions = {questions} /> */}
             {/* <Search /> */}
-            <button 
+            {/* <button 
                 onClick = {() => {onToggleButton(!toggleButton)}}
             >
                 Toggle Dropdown</button>
@@ -51,8 +52,8 @@ export default () => {
                 onSelectedChange = {setSelected}
                 options = {options}
                 /> : ''
-            }
-            
+            } */}
+            <Translate /> 
         </div>
     );
 }
